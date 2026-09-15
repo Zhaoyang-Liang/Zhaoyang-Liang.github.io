@@ -14,11 +14,9 @@ Cryptography Science and Technology, Nankai University. Advisor: Prof. Dan Ding 
 
 ## Research Interests
 
-- Fully Homomorphic Encryption and Encoding (Recent)
-- Post-Quantum and Lattice-Based Cryptography (Recent)
-- AI Accelerators and Cryptographic Hardware (Recent)
-- Privacy-Preserving Computing (Computation on Encrypted Data) (Previous)
-- Cryptographic Protocols and Provable Security (Previous)
+- Fully Homomorphic Encryption and Encoding
+- Post-Quantum and Lattice-Based Cryptography
+- AI Accelerators and Cryptographic Hardware
 
 ## Internship Experience
 
