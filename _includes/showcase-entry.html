@@ -1,0 +1,49 @@
+{% assign entry = include.entry %}
+{% assign entry_title = entry.title %}
+{% assign entry_award = entry.award %}
+{% assign entry_meta = entry.meta %}
+{% assign entry_project = entry.project %}
+{% assign entry_description = entry.description %}
+{% assign entry_tags = entry.tags %}
+{% assign entry_image_alt = entry.image_alt %}
+{% assign entry_placeholder = entry.placeholder %}
+{% if page.lang == "en" %}
+  {% assign entry_title = entry.title_en | default: entry.title %}
+  {% assign entry_award = entry.award_en | default: entry.award %}
+  {% assign entry_meta = entry.meta_en | default: entry.meta %}
+  {% assign entry_project = entry.project_en | default: entry.project %}
+  {% assign entry_description = entry.description_en | default: entry.description %}
+  {% assign entry_tags = entry.tags_en | default: entry.tags %}
+  {% assign entry_image_alt = entry.image_alt_en | default: entry.image_alt %}
+  {% assign entry_placeholder = entry.placeholder_en | default: entry.placeholder %}
+{% endif %}
+<article class="competition-card">
+  <div class="competition-card__media">
+    {% if entry.image %}
+    <img src="{{ entry.image | relative_url }}" alt="{{ entry_image_alt | default: entry_title | escape }}" loading="lazy">
+    {% else %}
+    <span class="competition-card__placeholder" role="img" aria-label="{{ entry_image_alt | default: entry_title | escape }}">{{ entry_placeholder | default: "项目图片" }}</span>
+    {% endif %}
+  </div>
+
+  <div class="competition-card__body">
+    <div class="competition-card__heading-row">
+      <h2>{{ entry_title | escape }}</h2>
+      {% if entry_award or entry_meta %}
+      <span class="competition-card__award"><em>{% if entry_award %}{{ entry_award | escape }}{% endif %}{% if entry_award and entry_meta %} · {% endif %}{% if entry_meta %}{{ entry_meta | escape }}{% endif %}</em></span>
+      {% endif %}
+    </div>
+
+    {% if entry_project %}
+    <p class="competition-card__project">{{ entry_project | escape }}</p>
+    {% endif %}
+
+    {% if entry_description %}
+    <p class="competition-card__description">{{ entry_description | escape }}</p>
+    {% endif %}
+
+    {% if entry_tags %}
+    <p class="competition-card__tags">{{ entry_tags | join: " · " | escape }}</p>
+    {% endif %}
+  </div>
+</article>

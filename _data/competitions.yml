@@ -1,0 +1,70 @@
+- id: cryptography-technology
+  display: featured
+  title: "全国密码学技术竞赛"
+  title_en: "National Cryptography Technology Competition"
+  award: "国家级一等奖"
+  award_en: "National First Prize"
+  project: "基于声学侧信道的口令密钥分析与防护系统"
+  project_en: "Password Key Analysis and Protection System Based on Acoustic Side Channels"
+  tags:
+    - 信息论
+    - 深度学习
+  tags_en:
+    - Information Theory
+    - Deep Learning
+  image: /images/competitions/mi-kouling.png
+  image_alt: "全国密码学技术竞赛项目展示"
+  image_alt_en: "National Cryptography Technology Competition project"
+
+- id: datacon
+  display: featured
+  title: "清华大学网研院 DataCon 数据分析大赛"
+  title_en: "DataCon Data Analysis Competition, Tsinghua University"
+  award: "国家级一等奖 全国亚军"
+  award_en: "National First Prize · Runner-up"
+  project: "具体用户针对性口令 (Password) 猜测"
+  project_en: "User-Specific Password Guessing"
+  tags:
+    - 深度学习
+  tags_en:
+    - Deep Learning
+  image: /images/competitions/datacon.png
+  image_alt: "DataCon 数据分析大赛项目展示"
+  image_alt_en: "DataCon Data Analysis Competition project"
+
+- id: ctf-beijing-tianjin-hebei
+  display: featured
+  title: "CFT - 京津冀大学生信息安全网络攻防大赛"
+  title_en: "CFT – Beijing–Tianjin–Hebei College Student Information Security Competition"
+  award: "省市级三等奖"
+  award_en: "Third Prize, Provincial/Municipal Level"
+  tags:
+    - Crypto
+    - Web
+  image: images/competitions/ctf.jpg
+  image_alt: "京津冀大学生信息安全网络攻防大赛项目展示"
+  image_alt_en: "Beijing–Tianjin–Hebei information security competition"
+
+- id: information-security-works
+  display: other
+  title: "全国大学生信息安全作品赛"
+  title_en: "National College Student Information Security Works Competition"
+  award: "国家级二等奖"
+  award_en: "National Second Prize"
+  project: "音落留痕：基于口令猜测模型的键盘声学安全检测系统"
+  project_en: "SoundTrace: A Keyboard Acoustic Security Detection System Based on Password Guessing Models"
+  image: images/competitions/xinan.png
+  image_alt: "全国大学生信息安全作品赛项目展示"
+  image_alt_en: "National College Student Information Security Works Competition project"
+
+- id: mathematical-modeling
+  display: other
+  title: "全国大学生数学建模竞赛"
+  title_en: "China Undergraduate Mathematical Contest in Modeling"
+  award: "天津市一等奖"
+  award_en: "First Prize, Tianjin"
+  project: "基于序贯概率比检验与概率评估的生产决策模型"
+  project_en: "Production Decision Model Based on Sequential Probability Ratio Testing and Probabilistic Evaluation"
+  image: /images/competitions/jianmo.png
+  image_alt: "全国大学生数学建模竞赛项目展示"
+  image_alt_en: "China Undergraduate Mathematical Contest in Modeling project"

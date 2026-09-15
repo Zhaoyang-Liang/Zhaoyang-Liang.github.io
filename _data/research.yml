@@ -1,0 +1,46 @@
+- id: bootstrapping-ring-switching
+  title: "Bootstrapping via Ring Switching without Slot Recovery: Independent Leaf Evaluation for SIMD-packed Ciphertexts"
+  authors:
+    - Zhaoyang Liang
+    - Dan Ding
+  keywords:
+    - FHE
+    - Bootstrapping
+    - SIMD
+  pdf: /files/bootstrapping-ring-switching.pdf
+
+- id: theta-series-ideal-lattices
+  title: "Dimension Reduction for Theta Series of Ideal Lattices"
+  authors:
+    - Runkun Liu
+    - Zhaoyang Liang
+    - Dan Ding
+  keywords:
+    - 理想格
+    - Theta 级数
+    - 高斯采样
+  keywords_en:
+    - Ideal Lattices
+    - Theta Series
+    - Gaussian Sampling
+  pdf: /files/theta-series-ideal-lattices.pdf
+
+- id: secure-deduplication-iot
+  title: "Secure and Efficient Deduplication for IoT Data in Fog-Assisted Cloud Storage Based on Server-Aided Encryption and Data Locality"
+  authors:
+    - Rongxi Wang
+    - Guanxiong Ha
+    - Chunfu Jia
+    - Zhaoyang Liang
+    - Zhen Su
+  support: "国家自然科学基金"
+  support_en: "National Natural Science Foundation of China"
+  keywords:
+    - 密码协议与隐私计算
+    - 加密数据去重
+    - 物联网安全
+  keywords_en:
+    - Cryptographic Protocols and Privacy-Preserving Computing
+    - Encrypted Data Deduplication
+    - IoT Security
+  pdf: /files/secure-deduplication-iot.pdf

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<main id="main" class="home-main">
+  {% assign profile_name = site.author.name %}
+  {% assign profile_affiliation = site.author.affiliation %}
+  {% assign profile_role = site.author.role %}
+  {% if page.lang == "en" %}
+    {% assign profile_name = site.author.name_en | default: site.author.name %}
+    {% assign profile_affiliation = site.author.affiliation_en | default: site.author.affiliation %}
+    {% assign profile_role = site.author.role_en | default: site.author.role %}
+  {% endif %}
+  <article class="home-page">
+    <header class="profile-intro">
+      {% include profile-photo.html %}
+      <div class="profile-intro__text">
+        <h1>{{ profile_name }}</h1>
+        <p class="profile-intro__affiliation">{{ profile_affiliation }}</p>
+        <p class="profile-intro__role">{{ profile_role }}</p>
+        {% include profile-links.html %}
+      </div>
+    </header>
+    <div class="home-content">{{ content }}</div>
+  </article>
+</main>

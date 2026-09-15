@@ -1,29 +1,37 @@
-{% include base_path %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
-          </li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+    {% if page.lang == "en" %}
+      {% assign home_url = "/en/main/" %}
+      {% assign nav_label = "Primary navigation" %}
+      {% assign theme_label = "Toggle dark mode" %}
+      {% assign menu_label = "Open navigation menu" %}
+    {% else %}
+      {% assign home_url = "/main/" %}
+      {% assign nav_label = "主导航" %}
+      {% assign theme_label = "切换深色模式" %}
+      {% assign menu_label = "展开导航" %}
+    {% endif %}
+    <nav id="site-nav" class="site-nav" aria-label="{{ nav_label }}">
+      <a class="site-nav__home{% if page.url == home_url %} is-current{% endif %}" href="{{ home_url | relative_url }}"{% if page.url == home_url %} aria-current="page"{% endif %}>{{ site.main_page_title | default: 'Main Page' }}</a>
+      <ul id="primary-navigation" class="site-nav__links">
+        {% for link in site.data.navigation.main %}
+          {% assign link_url = link.url %}
+          {% if page.lang == "en" %}{% assign link_url = link.en_url %}{% endif %}
+        <li><a href="{{ link_url | relative_url }}"{% if page.url == link_url %} class="is-current" aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% if page.lang_switch %}
+      <a class="site-nav__language" href="{{ page.lang_switch | relative_url }}" hreflang="{% if page.lang == 'en' %}zh{% else %}en{% endif %}" aria-label="{% if page.lang == 'en' %}切换至中文版{% else %}Switch to English{% endif %}">
+        {% include icon.html name="globe" %}<span>{% if page.lang == "en" %}中文{% else %}English{% endif %}</span>
+      </a>
+      {% endif %}
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="{{ theme_label }}" aria-pressed="false">
+        {% include icon.html name="sun" %}
+        {% include icon.html name="moon" %}
+      </button>
+      <button type="button" class="menu-toggle" aria-label="{{ menu_label }}" aria-controls="primary-navigation" aria-expanded="false">
+        {% include icon.html name="menu" %}
+      </button>
+    </nav>
   </div>
 </div>

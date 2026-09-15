@@ -14,11 +14,11 @@
   width: 100%;
   clear: both;
 
-  /* keep footer in normal document flow so custom widgets do not overlap content */
+  /* Allow the footer to grow with its content. */
   height: auto;
 
-  /* keep the footer on the bottom of the page */
-  position: fixed;
+  /* Anchor to the document bottom so it cannot cover long paper lists. */
+  position: absolute;
   bottom: 0;
 
   -webkit-animation: intro 0.3s both;

@@ -1,0 +1,14 @@
+<ul class="profile-links" aria-label="{% if page.lang == 'en' %}Contact links{% else %}联系方式{% endif %}">
+  {% if site.author.email %}
+  <li><a href="mailto:{{ site.author.email }}">{% include icon.html name="email" %}<span>Email</span></a></li>
+  {% endif %}
+  {% if site.author.github %}
+  <li><a href="https://github.com/{{ site.author.github }}">{% include icon.html name="github" %}<span>GitHub</span></a></li>
+  {% endif %}
+  {% if site.author.googlescholar %}
+  <li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
+  {% endif %}
+  {% if site.author.orcid %}
+  <li><a href="{{ site.author.orcid }}">ORCID</a></li>
+  {% endif %}
+</ul>

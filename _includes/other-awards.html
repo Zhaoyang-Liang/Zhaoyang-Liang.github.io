@@ -1,0 +1,16 @@
+<ul class="other-awards">
+{% for competition in include.entries %}
+  {% assign competition_title = competition.title %}
+  {% assign competition_award = competition.award %}
+  {% assign competition_project = competition.project %}
+  {% if page.lang == "en" %}
+    {% assign competition_title = competition.title_en | default: competition.title %}
+    {% assign competition_award = competition.award_en | default: competition.award %}
+    {% assign competition_project = competition.project_en | default: competition.project %}
+  {% endif %}
+  <li>
+    <p class="other-awards__heading"><strong>{{ competition_title | escape }}</strong>{% if competition_award %}<em>{{ competition_award | escape }}</em>{% endif %}</p>
+    {% if competition_project %}<p class="other-awards__project">{{ competition_project | escape }}</p>{% endif %}
+  </li>
+{% endfor %}
+</ul>

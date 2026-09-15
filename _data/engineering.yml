@@ -1,0 +1,30 @@
+- id: qianxin-internship
+  type: internship
+  title: "奇安信集团 · 奇安信技术研究院"
+  title_en: "QI-ANXIN Group · QI-ANXIN Technology Research Institute"
+  meta: "2025.12-2026.02 · 北京"
+  meta_en: "2025.12–2026.02 · Beijing"
+  project: "程序分析 · 网络安全与服务运维 · AI 安全"
+  project_en: "Program Analysis · Network Security and Service Operations · AI Security"
+  description: "二进制代码识别（应用科学研究院）；DNS、证书、身份认证与服务器运维；网页端大语言模型越狱防护。"
+  description_en: "Binary code identification (Institute of Applied Sciences); DNS, certificates, identity authentication, and server operations; jailbreak defenses for web-based large language models."
+  image: /images/engineering/qax.jpg
+  image_alt: "奇安信技术研究院实习展示"
+  image_alt_en: "QI-ANXIN Technology Research Institute internship"
+  placeholder: "实习图片"
+  placeholder_en: "Internship image"
+
+- id: module-ckks-chip
+  type: project
+  title: "Module-CKKS 全同态加密硬件设计"
+  title_en: "Module-CKKS Fully Homomorphic Encryption Hardware Design"
+  meta: "2026.06 · 密码芯片"
+  meta_en: "2026.06 · Cryptographic Hardware"
+  # project: "Module-LWE 全同态加密芯片"
+  description: "基于 Module-LWE 的全同态加密芯片设计与实现。"
+  description_en: "Design and implementation of a Module-LWE-based fully homomorphic encryption processor."
+  image: /images/engineering/MLWE.png
+  image_alt: "Module-CKKS 全同态加密硬件项目展示"
+  image_alt_en: "Module-CKKS fully homomorphic encryption hardware project"
+  placeholder: "项目图片"
+  placeholder_en: "Project image"
