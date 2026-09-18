@@ -20,7 +20,7 @@ The site has five conceptual pages in two route sets:
 
 | Page | Chinese-site route | English-site route | Content-language rule |
 | --- | --- | --- | --- |
-| Main Page | `/main/` | `/en/main/` | Body is English on both routes; surrounding profile and footer follow the route language |
+| Main Page | `/main/` | `/en/main/` | Full visible page is English on both routes; route pairing and navigation still follow the current site language |
 | Overview | `/` | `/en/` | Fully localized Chinese/English versions |
 | Research | `/research/` | `/en/research/` | Research content is English on both routes; surrounding sidebar and footer follow the route language |
 | Engineering | `/engineering/` | `/en/engineering/` | Fully localized through shared data fields |
@@ -28,7 +28,7 @@ The site has five conceptual pages in two route sets:
 
 The root route `/` is the default landing page and shows Overview. `Main Page` remains the first navigation item even though it is not the landing page.
 
-The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. Do not use the English language merely because the page body is English: on `/main/` and `/research/`, the Chinese profile, sidebar, footer, HTML language, and interface text must remain Chinese.
+The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. `/main/` also sets `content_lang: en`: it keeps Chinese-route navigation and language-switch behavior, while its visible content, profile identity, footer, HTML language, and metadata remain English. Research has English body content but keeps the Chinese shell on `/research/`.
 
 ### Navigation behavior
 
@@ -93,7 +93,7 @@ Jekyll does not reload `_config.yml` while serving. Restart the local server aft
 
 ## Main Page
 
-Both `/main/` and `/en/main/` include `_includes/main-page-content.md`. This is intentional: Main Page has a single English body shared by both routes.
+Both `/main/` and `/en/main/` include `_includes/main-page-content.md`. This is intentional: Main Page has a single English body shared by both routes. The Chinese route also declares `content_lang: en`, so its profile identity and footer must remain English.
 
 - Edit the biography and research-interest prose only in `_includes/main-page-content.md`.
 - Do not duplicate the prose in `_pages/about.md` or `_pages/en-main.md`.

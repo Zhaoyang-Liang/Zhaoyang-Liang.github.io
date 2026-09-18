@@ -1,7 +1,8 @@
 {% include base_path %}
+{% assign content_lang = page.content_lang | default: page.lang %}
 {% assign ui_locale = site.locale %}
 {% assign footer_name = site.name | default: site.title %}
-{% if page.lang == "en" %}
+{% if content_lang == "en" %}
   {% assign ui_locale = "en" %}
   {% assign footer_name = site.author.name_en | default: site.title_en | default: footer_name %}
 {% endif %}
@@ -27,5 +28,5 @@
 
 <div class="page__footer-copyright">
   &copy; {{ site.time | date: '%Y' }} {{ footer_name }}, {{ site.data.ui-text[ui_locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  {% if page.lang == "en" %}Last updated: {% else %}最后更新：{% endif %}{{ "now" | date: '%Y-%m-%d' }}
+  {% if content_lang == "en" %}Last updated: {% else %}最后更新：{% endif %}{{ "now" | date: '%Y-%m-%d' }}
 </div>

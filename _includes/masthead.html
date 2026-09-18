@@ -1,6 +1,7 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
-    {% if page.lang == "en" %}
+    {% assign content_lang = page.content_lang | default: page.lang %}
+    {% if content_lang == "en" %}
       {% assign home_url = "/en/main/" %}
       {% assign nav_label = "Primary navigation" %}
       {% assign theme_label = "Toggle dark mode" %}

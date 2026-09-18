@@ -8,7 +8,8 @@
 {% assign localized_site_title = site.title %}
 {% assign localized_site_description = site.description %}
 {% assign page_locale = site.locale | default: "zh-CN" %}
-{% if page.lang == "en" %}
+{% assign content_lang = page.content_lang | default: page.lang %}
+{% if content_lang == "en" %}
   {% assign localized_site_title = site.title_en | default: site.title %}
   {% assign localized_site_description = site.description_en | default: site.description %}
   {% assign page_locale = "en_US" %}

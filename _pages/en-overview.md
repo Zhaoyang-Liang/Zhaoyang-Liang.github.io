@@ -10,7 +10,7 @@ last_updated: "2026-09-15"
 
 ## Zhaoyang Liang
 
-Cryptography Science and Technology, Nankai University. Advisor: Prof. Dan Ding (Ming-Ming Cheng Group)
+Cryptography Science and Technology, Nankai University. Advisor: Prof. Dan Ding (advised by Prof. Xiaoyun Wang)
 
 ## Research Interests
 

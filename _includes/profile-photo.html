@@ -1,6 +1,7 @@
 <div class="profile-photo">
+  {% assign content_lang = page.content_lang | default: page.lang %}
   {% assign profile_name = site.author.name %}
-  {% if page.lang == "en" %}{% assign profile_name = site.author.name_en | default: site.author.name %}{% endif %}
+  {% if content_lang == "en" %}{% assign profile_name = site.author.name_en | default: site.author.name %}{% endif %}
   {% if site.author.avatar %}
     {% if site.author.avatar contains "://" %}
       <img src="{{ site.author.avatar }}" alt="{{ profile_name }}" width="200" height="200" fetchpriority="high">
@@ -8,8 +9,8 @@
       <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ profile_name }}" width="200" height="200" fetchpriority="high">
     {% endif %}
   {% else %}
-    <div class="profile-photo__placeholder" role="img" aria-label="{% if page.lang == 'en' %}Profile photo placeholder{% else %}个人照片预留位置{% endif %}">
-      <span aria-hidden="true">{% if page.lang == "en" %}Profile photo{% else %}个人照片{% endif %}</span>
+    <div class="profile-photo__placeholder" role="img" aria-label="{% if content_lang == 'en' %}Profile photo placeholder{% else %}个人照片预留位置{% endif %}">
+      <span aria-hidden="true">{% if content_lang == "en" %}Profile photo{% else %}个人照片{% endif %}</span>
     </div>
   {% endif %}
 </div>
