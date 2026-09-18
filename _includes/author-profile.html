@@ -1,7 +1,8 @@
 {% assign profile_name = site.author.name %}
 {% assign profile_bio = site.author.bio %}
 {% assign profile_employer = site.author.employer %}
-{% if page.lang == "en" %}
+{% assign profile_lang = page.profile_lang | default: page.lang %}
+{% if profile_lang == "en" %}
   {% assign profile_name = site.author.name_en | default: site.author.name %}
   {% assign profile_bio = site.author.bio_en | default: site.author.bio %}
   {% assign profile_employer = site.author.employer_en | default: site.author.employer %}

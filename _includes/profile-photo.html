@@ -1,5 +1,5 @@
 <div class="profile-photo">
-  {% assign content_lang = page.content_lang | default: page.lang %}
+  {% assign content_lang = page.profile_lang | default: page.content_lang | default: page.lang %}
   {% assign profile_name = site.author.name %}
   {% if content_lang == "en" %}{% assign profile_name = site.author.name_en | default: site.author.name %}{% endif %}
   {% if site.author.avatar %}

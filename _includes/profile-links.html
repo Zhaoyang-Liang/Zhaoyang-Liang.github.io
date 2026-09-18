@@ -1,4 +1,4 @@
-{% assign content_lang = page.content_lang | default: page.lang %}
+{% assign content_lang = page.profile_lang | default: page.content_lang | default: page.lang %}
 <ul class="profile-links" aria-label="{% if content_lang == 'en' %}Contact links{% else %}联系方式{% endif %}">
   {% if site.author.email %}
   <li><a href="mailto:{{ site.author.email }}">{% include icon.html name="email" %}<span>Email</span></a></li>

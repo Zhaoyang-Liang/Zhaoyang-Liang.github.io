@@ -22,13 +22,13 @@ The site has five conceptual pages in two route sets:
 | --- | --- | --- | --- |
 | Main Page | `/main/` | `/en/main/` | Full visible page is English on both routes; route pairing and navigation still follow the current site language |
 | Overview | `/` | `/en/` | Fully localized Chinese/English versions |
-| Research | `/research/` | `/en/research/` | Research content is English on both routes; surrounding sidebar and footer follow the route language |
+| Research | `/research/` | `/en/research/` | Research content and left profile sidebar are English on both routes; footer follows the route language |
 | Engineering | `/engineering/` | `/en/engineering/` | Fully localized through shared data fields |
 | Competitions | `/competitions/` | `/en/competitions/` | Fully localized through shared data fields |
 
 The root route `/` is the default landing page and shows Overview. `Main Page` remains the first navigation item even though it is not the landing page.
 
-The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. `/main/` also sets `content_lang: en`: it keeps Chinese-route navigation and language-switch behavior, while its visible content, profile identity, footer, HTML language, and metadata remain English. Research has English body content but keeps the Chinese shell on `/research/`.
+The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. `/main/` also sets `content_lang: en`: it keeps Chinese-route navigation and language-switch behavior, while its visible content, profile identity, footer, HTML language, and metadata remain English. `/research/` sets `profile_lang: en`, so its left profile sidebar is English while its footer remains Chinese.
 
 ### Navigation behavior
 
