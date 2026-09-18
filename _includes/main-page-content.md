@@ -1,6 +1,6 @@
 ## Short Bio
 
-I am an undergraduate student at the College of Cyber Science, Nankai University, and the Youth League branch secretary for the 2023 cohort of the Cryptography Science and Technology program. My graduate advisor is Prof. Dan Ding.
+I am an undergraduate student at the College of Cryptology and Cyber Science, Nankai University, and the Youth League branch secretary for the 2023 cohort of the Cryptography Science and Technology program. My graduate advisor is Prof. Dan Ding.
 
 ## Current Research Interests
 

@@ -80,7 +80,7 @@ author:
   employer: "南开大学"
   employer_en: "Nankai University"
   affiliation: "南开大学密码与网络空间安全学院"
-  affiliation_en: "College of Cyber Science, Nankai University"
+  affiliation_en: "College of Cryptology and Cyber Science, Nankai University"
   role: "密码科学与技术"
   role_en: "Cryptography Science and Technology"
   email: "budongjishubu@gmail.com"
