@@ -28,6 +28,6 @@ last_updated: "2026-09-15"
 
 - 全国密码学技术竞赛一等奖
 - 清华大学网研院 DataCon 数据分析大赛全国亚军
-- CFT-京津冀大学生信息安全网络攻防大赛省市级三等奖
+- CTF-京津冀大学生信息安全网络攻防大赛省市级三等奖
 
 <p class="overview-updated">最近更新：{{ page.last_updated }}</p>

@@ -26,6 +26,6 @@ Cryptography Science and Technology, Nankai University. Advisor: Prof. Dan Ding 
 
 - First Prize, National Cryptography Technology Competition
 - National Runner-up, DataCon Data Analysis Competition, Tsinghua University
-- Third Prize, Beijing–Tianjin–Hebei College Student Information Security Competition (CFT)
+- Third Prize, Beijing–Tianjin–Hebei College Student Information Security Competition (CTF)
 
 <p class="overview-updated">Last updated: {{ page.last_updated }}</p>

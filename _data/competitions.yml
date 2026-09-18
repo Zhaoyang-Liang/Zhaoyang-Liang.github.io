@@ -34,8 +34,8 @@
 
 - id: ctf-beijing-tianjin-hebei
   display: featured
-  title: "CFT - 京津冀大学生信息安全网络攻防大赛"
-  title_en: "CFT – Beijing–Tianjin–Hebei College Student Information Security Competition"
+  title: "CTF - 京津冀大学生信息安全网络攻防大赛"
+  title_en: "CTF – Beijing–Tianjin–Hebei College Student Information Security Competition"
   award: "省市级三等奖"
   award_en: "Third Prize, Provincial/Municipal Level"
   tags:
