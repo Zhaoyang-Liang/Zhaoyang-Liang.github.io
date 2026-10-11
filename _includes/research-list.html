@@ -1,4 +1,5 @@
-{% for paper in site.data.research %}
+{% assign papers = include.entries | default: site.data.research %}
+{% for paper in papers %}
   {% assign paper_support = paper.support_en | default: paper.support %}
   {% assign paper_keywords = paper.keywords_en | default: paper.keywords %}
 <article class="research-paper" aria-labelledby="{{ paper.id }}">

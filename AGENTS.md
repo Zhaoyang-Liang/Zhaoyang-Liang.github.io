@@ -113,7 +113,7 @@ Overview is the concise landing page.
 last_updated: "YYYY-MM-DD"
 ```
 
-Do not replace it with an automatic build date unless the user explicitly changes this policy.
+This Overview line is the site's only update-date display. The shared footer does not show a build or update date. Do not add an automatic build date unless the user explicitly changes this policy.
 
 ## Research entries and PDFs
 
@@ -122,6 +122,7 @@ Research content is rendered from `_data/research.yml` by `_includes/research-li
 Current display rules:
 
 - The heading is `Selected Research Works` on both routes.
+- Entries with `category: selected` appear under `Selected Research Works`; entries with `category: draft` appear in a separate `Current Research (Drafts)` section below it. Both routes use the same categories and PDFs.
 - Paper titles are English and link directly to local PDFs.
 - Every author name is bold.
 - There is no separate PDF button and no paragraph-length paper description.
@@ -133,6 +134,7 @@ Example entry:
 
 ```yaml
 - id: example-paper
+  category: selected
   title: "English Paper Title"
   authors:
     - First Author
@@ -150,7 +152,7 @@ The renderer prefers `support_en` and `keywords_en`, falling back to `support` a
 
 1. Copy the PDF into `files/` using a stable ASCII filename with no spaces when practical.
 2. Add or update the corresponding YAML entry.
-3. Keep `id` unique, lowercase, and hyphenated.
+3. Keep `id` unique, lowercase, and hyphenated. Set `category: selected` for the selected works section or `category: draft` for the current drafts section; entries without a category will not appear on the Research pages.
 4. Use a root-relative PDF path such as `/files/example-paper.pdf`.
 5. Confirm that clicking the title opens the PDF.
 
@@ -159,6 +161,7 @@ The current PDFs are:
 - `files/bootstrapping-ring-switching.pdf`
 - `files/theta-series-ideal-lattices.pdf`
 - `files/secure-deduplication-iot.pdf`
+- `files/precision-allocation-ckks-draft.pdf` (current research draft)
 
 ## Engineering and internships
 

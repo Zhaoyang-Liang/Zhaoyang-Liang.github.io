@@ -5,7 +5,7 @@ author_profile: true
 description: "Overview of Zhaoyang Liang's research, internship, and awards"
 lang: en
 lang_switch: /
-last_updated: "2026-09-15"
+last_updated: "2026-10-11"
 ---
 
 ## Zhaoyang Liang

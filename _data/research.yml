@@ -1,4 +1,5 @@
 - id: bootstrapping-ring-switching
+  category: selected
   title: "Bootstrapping via Ring Switching without Slot Recovery: Independent Leaf Evaluation for SIMD-packed Ciphertexts"
   authors:
     - Zhaoyang Liang
@@ -10,6 +11,7 @@
   pdf: /files/bootstrapping-ring-switching.pdf
 
 - id: theta-series-ideal-lattices
+  category: selected
   title: "Dimension Reduction for Theta Series of Ideal Lattices"
   authors:
     - Runkun Liu
@@ -26,6 +28,7 @@
   pdf: /files/theta-series-ideal-lattices.pdf
 
 - id: secure-deduplication-iot
+  category: selected
   title: "Secure and Efficient Deduplication for IoT Data in Fog-Assisted Cloud Storage Based on Server-Aided Encryption and Data Locality"
   authors:
     - Rongxi Wang
@@ -44,3 +47,14 @@
     - Encrypted Data Deduplication
     - IoT Security
   pdf: /files/secure-deduplication-iot.pdf
+
+- id: precision-allocation-ckks
+  category: draft
+  title: "Precision Allocation for CKKS"
+  authors:
+    - Zhaoyang Liang
+    - Dan Ding
+  keywords:
+    - FHE
+    - Error Analysis
+  pdf: /files/precision-allocation-ckks-draft.pdf

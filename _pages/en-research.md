@@ -9,4 +9,10 @@ lang_switch: /research/
 
 ## Selected Research Works
 
-{% include research-list.html %}
+{% assign selected_papers = site.data.research | where: "category", "selected" %}
+{% include research-list.html entries=selected_papers %}
+
+## Current Research (Drafts)
+
+{% assign draft_papers = site.data.research | where: "category", "draft" %}
+{% include research-list.html entries=draft_papers %}
