@@ -21,12 +21,12 @@ The site has five conceptual pages in two route sets:
 | Page | Chinese-site route | English-site route | Content-language rule |
 | --- | --- | --- | --- |
 | Main Page | `/main/` | `/en/main/` | Full visible page is English on both routes; route pairing and navigation still follow the current site language |
-| Overview | `/` | `/en/` | Fully localized Chinese/English versions |
+| Overview | `/overview/` | `/` | Fully localized Chinese/English versions; `/en/` redirects to `/` |
 | Research | `/research/` | `/en/research/` | Research content and left profile sidebar are English on both routes |
 | Engineering | `/engineering/` | `/en/engineering/` | Fully localized through shared data fields |
 | Competitions | `/competitions/` | `/en/competitions/` | Fully localized through shared data fields |
 
-The root route `/` is the default landing page and shows Overview. `Main Page` remains the first navigation item even though it is not the landing page.
+The root route `/` is the default landing page and shows English Overview, including English navigation destinations and profile identity. Chinese Overview is at `/overview/`; the previous English address `/en/` redirects to `/` for compatibility. `Main Page` remains the first navigation item even though it is not the landing page.
 
 The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. `/main/` also sets `content_lang: en`: it keeps Chinese-route navigation and language-switch behavior, while its visible content, profile identity, HTML language, and metadata remain English. `/research/` sets `profile_lang: en`, so its left profile sidebar is English. No global footer is rendered on the site.
 
@@ -102,7 +102,7 @@ Both `/main/` and `/en/main/` include `_includes/main-page-content.md`. This is 
 
 ## Overview
 
-Overview is the concise landing page.
+Overview is the concise landing page. First-time visitors to `/` see the English version; the language switch opens Chinese Overview at `/overview/`.
 
 - Edit Chinese content in `_pages/overview.md`.
 - Mirror the same facts in English in `_pages/en-overview.md`.
@@ -332,17 +332,19 @@ git diff --check
 Then inspect the affected route and its paired-language route. For broad changes, verify all ten routes:
 
 ```text
-/
+/overview/
 /main/
 /research/
 /engineering/
 /competitions/
-/en/
+/
 /en/main/
 /en/research/
 /en/engineering/
 /en/competitions/
 ```
+
+Also verify that the compatibility alias `/en/` redirects to `/`.
 
 Also verify:
 

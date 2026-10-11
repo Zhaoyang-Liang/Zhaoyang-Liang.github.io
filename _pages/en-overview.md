@@ -1,10 +1,12 @@
 ---
-permalink: /en/
+permalink: /
+redirect_from:
+  - /en/
 title: "Zhaoyang Liang"
 author_profile: true
 description: "Overview of Zhaoyang Liang's research, internship, and awards"
 lang: en
-lang_switch: /
+lang_switch: /overview/
 last_updated: "2026-10-11"
 ---
 

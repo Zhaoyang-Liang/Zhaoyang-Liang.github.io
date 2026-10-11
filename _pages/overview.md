@@ -1,12 +1,10 @@
 ---
-permalink: /
-redirect_from:
-  - /overview/
+permalink: /overview/
 title: "Zhaoyang Liang"
 author_profile: true
 description: " "
 lang: zh
-lang_switch: /en/
+lang_switch: /
 last_updated: "2026-10-11"
 ---
 
