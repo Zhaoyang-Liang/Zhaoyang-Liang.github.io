@@ -22,13 +22,13 @@ The site has five conceptual pages in two route sets:
 | --- | --- | --- | --- |
 | Main Page | `/main/` | `/en/main/` | Full visible page is English on both routes; route pairing and navigation still follow the current site language |
 | Overview | `/` | `/en/` | Fully localized Chinese/English versions |
-| Research | `/research/` | `/en/research/` | Research content and left profile sidebar are English on both routes; footer follows the route language |
+| Research | `/research/` | `/en/research/` | Research content and left profile sidebar are English on both routes |
 | Engineering | `/engineering/` | `/en/engineering/` | Fully localized through shared data fields |
 | Competitions | `/competitions/` | `/en/competitions/` | Fully localized through shared data fields |
 
 The root route `/` is the default landing page and shows Overview. `Main Page` remains the first navigation item even though it is not the landing page.
 
-The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. `/main/` also sets `content_lang: en`: it keeps Chinese-route navigation and language-switch behavior, while its visible content, profile identity, footer, HTML language, and metadata remain English. `/research/` sets `profile_lang: en`, so its left profile sidebar is English while its footer remains Chinese.
+The Chinese routes use `lang: zh`; English routes use `lang: en`. Each page declares `lang_switch` pointing to its counterpart. `/main/` also sets `content_lang: en`: it keeps Chinese-route navigation and language-switch behavior, while its visible content, profile identity, HTML language, and metadata remain English. `/research/` sets `profile_lang: en`, so its left profile sidebar is English. No global footer is rendered on the site.
 
 ### Navigation behavior
 
@@ -93,7 +93,7 @@ Jekyll does not reload `_config.yml` while serving. Restart the local server aft
 
 ## Main Page
 
-Both `/main/` and `/en/main/` include `_includes/main-page-content.md`. This is intentional: Main Page has a single English body shared by both routes. The Chinese route also declares `content_lang: en`, so its profile identity and footer must remain English.
+Both `/main/` and `/en/main/` include `_includes/main-page-content.md`. This is intentional: Main Page has a single English body shared by both routes. The Chinese route also declares `content_lang: en`, so its profile identity must remain English.
 
 - Edit the biography and research-interest prose only in `_includes/main-page-content.md`.
 - Do not duplicate the prose in `_pages/about.md` or `_pages/en-main.md`.
@@ -113,7 +113,7 @@ Overview is the concise landing page.
 last_updated: "YYYY-MM-DD"
 ```
 
-This Overview line is the site's only update-date display. The shared footer does not show a build or update date. Do not add an automatic build date unless the user explicitly changes this policy.
+This Overview line is the site's only update-date display. The global footer (follow links, copyright, and theme credits) has been removed from the layouts. Do not restore it or add an automatic build date unless the user explicitly changes this policy. Keep the repository's LICENSE file intact.
 
 ## Research entries and PDFs
 
@@ -247,7 +247,6 @@ _config.yml defaults
   -> _layouts/default.html
      -> _includes/masthead.html
      -> page-specific layout
-     -> _includes/footer.html
 ```
 
 Secondary pages use `_layouts/single.html`, which adds the profile sidebar. Main Page uses `_layouts/home.html`, which renders the photo and identity at the top and keeps the narrative full width.
@@ -261,7 +260,7 @@ Important shared components:
 - `_includes/showcase-entry.html`: featured competition and engineering card renderer.
 - `_includes/other-awards.html`: compact award list renderer.
 - `_includes/icon.html`: inline site icons.
-- `_includes/footer.html`: localized footer.
+- `_includes/footer.html` and `_includes/footer/custom.html`: retained template files, not included by the layouts; the site has no global footer.
 
 Do not copy component markup into page files. Extend the shared include if the same structural change should appear in multiple places.
 
@@ -349,7 +348,8 @@ Also verify:
 
 - The selected navigation entry alone is bold.
 - The language switch opens the matching counterpart.
-- Chinese routes retain Chinese sidebar/footer language even when body content is English.
+- Profile language follows the page rules above: `/main/` and `/research/` display English identity, while other Chinese routes use Chinese identity.
+- No global footer or duplicate update-date line appears.
 - Email uses `mailto:budongjishubu@gmail.com`.
 - GitHub opens `https://github.com/Zhaoyang-Liang`.
 - Research titles open their local PDFs.

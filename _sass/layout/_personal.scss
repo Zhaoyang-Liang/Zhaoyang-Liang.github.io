@@ -427,19 +427,6 @@ html[data-theme="dark"] .theme-toggle {
   text-align: right;
 }
 
-.page__footer {
-  position: static;
-  float: none;
-  clear: both;
-  flex: 0 0 auto;
-  margin: 0;
-  animation: none;
-  padding: 20px 0 24px;
-  footer { max-width: var(--site-width); width: 100%; margin: 0 auto; padding: 0 var(--site-gutter); }
-}
-.page__footer-copyright { font-size: 12px; line-height: 1.9; }
-.page__footer-follow { margin-bottom: 6px; }
-
 @media (max-width: 1000px) {
   :root { --site-gutter: 28px; }
   #main { grid-template-columns: 170px minmax(0, 1fr); gap: 36px; }
